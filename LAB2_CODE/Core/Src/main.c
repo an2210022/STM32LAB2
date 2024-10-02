@@ -544,29 +544,29 @@ static void MX_GPIO_Init(void)
 int cnt = 50;
 int cnt2 = 25;
 void HAL_TIM_PeriodElapsedCallback (TIM_HandleTypeDef * htim){
-//	cnt--;
-//	if(cnt <= 0){
-//		cnt = 50;
-//
-//		//EX1
-//		switch(status){
-//			case 1:
-//				display7SEG(status);
-//				HAL_GPIO_WritePin(GPIOA, EN0_Pin, 0);
-//				HAL_GPIO_WritePin(GPIOA, EN1_Pin, 1);
-//				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-//				status++;
-//				break;
-//			case 2:
-//				display7SEG(status);
-//				HAL_GPIO_WritePin(GPIOA, EN0_Pin, 1);
-//				HAL_GPIO_WritePin(GPIOA, EN1_Pin, 0);
-//				status = 1;
-//				break;
-//			default:
-//				break;
-//		}
-//	}
+	cnt--;
+	if(cnt <= 0){
+		cnt = 50;
+
+		//EX1
+		switch(status){
+			case 1:
+				display7SEG(status);
+				HAL_GPIO_WritePin(GPIOA, EN0_Pin, 0);
+				HAL_GPIO_WritePin(GPIOA, EN1_Pin, 1);
+				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+				status++;
+				break;
+			case 2:
+				display7SEG(status);
+				HAL_GPIO_WritePin(GPIOA, EN0_Pin, 1);
+				HAL_GPIO_WritePin(GPIOA, EN1_Pin, 0);
+				status = 1;
+				break;
+			default:
+				break;
+		}
+	}
 
 //		//EX2
 //		cnt--;
